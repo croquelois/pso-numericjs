@@ -1,4 +1,4 @@
-#bfgs-numericjs
+#pso-numericjs
 
 optimisation with pso, implemented using [numericjs] (http://www.numericjs.com)
 
