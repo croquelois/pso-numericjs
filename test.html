@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+
+
+</style>
+<script src="numeric.js"></script>
+<script src="pso.js"></script>
+
+<script>
+ 
+function sqr(x){ return x*x; };
+function f(arg){
+  var x = arg[0];
+  var y = arg[1];
+  return sqr(10*(y-x*x)) + sqr(1-x);
+}
+
+var ret = numeric.pso(2,{f:f},[5,5],[-5,-5]);
+console.log(ret);
+</script>
+
+</head>
+<body>
+<p>Check the console</p>
+</body>
+</html>
