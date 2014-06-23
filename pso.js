@@ -1,5 +1,9 @@
 "use strict";
-(function(exports){
+(function(undefined){
+var globalScope = (typeof global !== 'undefined') ? global : this;
+var hasModule = (typeof module !== 'undefined') && module.exports;
+if(hasModule) numeric = require('./numeric');
+
 function pso(dim,obj,up,down,opt){
   opt = opt || {};
   var nbRun = opt.nbRun || 3;
@@ -61,6 +65,7 @@ function pso(dim,obj,up,down,opt){
   return bestAgent;
 }
 
-exports.pso = pso;
-}(numeric));
+if (hasModule) module.exports = pso;
+else globalScope.pso = pso;
+}).call(this);
 

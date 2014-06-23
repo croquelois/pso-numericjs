@@ -17,7 +17,7 @@ function f(arg){
   return sqr(10*(y-x*x)) + sqr(1-x);
 }
 
-var ret = numeric.pso(2,{f:f},[5,5],[-5,-5]);
+var ret = pso(2,{f:f},[5,5],[-5,-5]);
 console.log(ret);
 </script>
 
